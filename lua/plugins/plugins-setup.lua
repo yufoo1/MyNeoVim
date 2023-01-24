@@ -48,13 +48,23 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-path"
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
-  -- use "akinsho/bufferline.nvim"
-  -- use "lewis6991/gitsigns.nvim"
+  use "akinsho/bufferline.nvim"
+  use "lewis6991/gitsigns.nvim"
   use {
     'nvim-telescope/telescope.nvim', 
       tag = '0.1.1',
       requires = { {'nvim-lua/plenary.nvim'} }
-  }  
+    }
+  use {
+    'scalameta/nvim-metals', 
+      requires = { 
+        "nvim-lua/plenary.nvim" 
+      }
+    }
+  use {
+    "akinsho/toggleterm.nvim", 
+      tag = '*', 
+    }  
   if packer_bootstrap then
     require('packer').sync()
   end
