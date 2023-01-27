@@ -1,5 +1,10 @@
 local opt = vim.opt
 
+-- colorscheme
+opt.termguicolors = true 
+vim.cmd[[colorscheme solarized]]
+vim.o.bg = 'light'
+
 -- line number
 opt.number = true
 opt.relativenumber = true
