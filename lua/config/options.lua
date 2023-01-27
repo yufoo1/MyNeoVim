@@ -7,7 +7,6 @@ vim.o.bg = 'light'
 
 -- line number
 opt.number = true
-opt.relativenumber = true
 
 -- ident
 opt.tabstop = 2
