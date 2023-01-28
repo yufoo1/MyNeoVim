@@ -8,3 +8,5 @@ require("toggleterm").setup{
     border = 'curved',
     },
 }
+
+vim.keymap.set("n", "<leader>\\", ":ToggleTerm direction=float")
