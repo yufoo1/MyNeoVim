@@ -20,15 +20,16 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+--- colorscheme  
   use 'shaunsingh/solarized.nvim'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'ryanoasis/vim-devicons', opt = true }
   }
   use {
   'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      'ryanoasis/vim-devicons',
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
@@ -63,8 +64,18 @@ return require('packer').startup(function(use)
     }
   use {
     "akinsho/toggleterm.nvim", 
-      tag = '*', 
-    }  
+      tag = '*',
+    }
+--- Haskell plugin
+  use {
+    'mrcjkb/haskell-tools.nvim',
+    requires = {
+      'neovim/nvim-lspconfig',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+    },
+    branch = '1.x.x',
+  }
   if packer_bootstrap then
     require('packer').sync()
   end
