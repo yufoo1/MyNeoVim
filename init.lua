@@ -12,6 +12,6 @@ require("plugins.comment")
 require("plugins.autopairs")
 require("plugins.bufferline")
 
--- require("plugins.nvim-metals")
+require("plugins.nvim-metals")
 require("plugins.toggleterm")
 require("plugins.haskell-tools")
