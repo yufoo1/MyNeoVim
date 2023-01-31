@@ -1,7 +1,7 @@
 require("plugins.plugins-setup")
 require("config.options")
 require("config.keymaps")
-
+require("config.auto-save")
 -- plugins
 require("plugins.lualine")
 require("plugins.nvim-tree")
